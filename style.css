@@ -1,0 +1,97 @@
+.border {
+  background-color: darkslategray;
+}
+
+.uxanimate__fadeIn:hover {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: var(--duration-short);
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+}
+
+.uxanimate__fadeOut:hover {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  animation-duration: var(--duration-short);
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+.uxanimate__slideInLeft:hover{
+  animation-name: slideInLeft;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__slideInRight:hover{
+  animation-name: slideInRight;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__slideOutLeft:hover{
+  animation-name: slideOutLeft;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__slideOutRight:hover{
+  animation-name: slideOutRight;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__zoomIn:hover{
+  animation-name: zoomIn;
+  animation-duration: var(--duration-short);
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__zoomOut:hover {
+  animation-name: zoomOut;
+  animation-duration: var(--duration-short);
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__blob {
+  width: 200px;
+  height: 200px;
+  margin-left: 45%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.uxanimate__slideInLeftFade:hover, .uxanimate__slideInRightFade:hover{
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.uxanimate__fadeInBottom:hover{
+  animation-name: fadeInBottom;
+  animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__slideInTopFadeSlow, .uxanimate__slideInTopFadeMid, .uxanimate__slideInTopFadeFast {
+  opacity: 0;
+}
+
+.line {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

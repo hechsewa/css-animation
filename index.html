@@ -3,25 +3,111 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Animation testing</title>
+  <title>uxanimate library</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <link
     rel="stylesheet"
     href="uxanimate.css"
   />
+  <link
+    rel="stylesheet"
+    href="styleux.css"
+  />
 </head>
 
 <body style="background-color: #0a0706">
-<h2 class="uxanimate__fadeIn opac">Fade In</h2>
-<h2 class="uxanimate__fadeOut">Fade out</h2>
-<h2 class="uxanimate__slideInLeft opac">slide in left</h2>
-<h2 class="uxanimate__slideInRight opac">slide in right</h2>
-<h2 class="uxanimate__slideOutLeft">slide out left</h2>
-<h2 class="uxanimate__slideOutRight">slide out right</h2>
-<h2 class="uxanimate__zoomIn">zoom in</h2>
-<h2 class="uxanimate__zoomOut">zoom out</h2>
-<h2 class="uxanimate__spacing">spacing</h2>
-<div class="line"></div>
+  <h1>uxanimate.css</h1>
+<div class="effects-row">
+  <div class="effect">
+    <p>1. fade in</p>
+    <div class="effect-in uxanimate__fadeIn"></div>
+  </div>
+  <div class="effect uxanimate__zoomInO">
+    <p>2. zoom in</p>
+    <div class="effect-in uxanimate__zoomIn"></div>
+  </div>
+  <div class="effect uxanimate__slideInLeftO">
+    <p>3. slide in left</p>
+    <div class="effect-in uxanimate__slideInLeft"></div>
+  </div>
+  <div class="effect uxanimate__slideInRightO">
+    <p>4. slide in right</p>
+    <div class="effect-in uxanimate__slideInRight"></div>
+  </div>
+</div>
+<div class="effects-row">
+  <div class="effect">
+    <p>5. fade out</p>
+    <div class="effect-in uxanimate__fadeOut"></div>
+  </div>
+  <div class="effect uxanimate__zoomOutO">
+    <p>6. zoom out</p>
+    <div class="effect-in uxanimate__zoomOut"></div>
+  </div>
+  <div class="effect uxanimate__slideOutLeftO">
+    <p>7. slide out left</p>
+    <div class="effect-in uxanimate__slideOutLeft"></div>
+  </div>
+  <div class="effect uxanimate__slideOutRightO">
+    <p>8. slide out right</p>
+    <div class="effect-in uxanimate__slideOutRight"></div>
+  </div>
+</div>
+<div class="effects-row">
+  <div class="effect">
+    <p>9. spacing (text only)</p>
+    <div class="effect-in uxanimate__spacing">header</div>
+  </div>
+  <div class="effect uxanimate__swipeIn">
+    <p>10. swipe in</p>
+    <div class="effect-in uxanimate__swipeInInside"></div>
+  </div>
+  <div class="effect uxanimate__swipeInOut">
+    <p>11. swipe in out</p>
+    <div class="effect-in uxanimate__swipeInOutInside"></div>
+  </div>
+  <div class="effect">
+    <p>12. highlight text (text only)</p>
+    <div class="uxanimate__highlightText">header</div>
+  </div>
+</div>
+<div class="effects-row">
+  <div class="effect uxanimate__fadeInOnHover">
+    <p>13. fade in with spin</p>
+    <div class="effect-in uxanimate__fadeInOnHoverIn"></div>
+  </div>
+  <div class="effect uxanimate__slideInFadeO">
+    <p>14. slide in left fade</p>
+    <div class="effect-in uxanimate__slideInLeftFade"></div>
+  </div>
+  <div class="effect uxanimate__slideInFadeO">
+    <p>15. slide in right fade</p>
+    <div class="effect-in uxanimate__slideInRightFade"></div>
+  </div>
+  <div class="effect uxanimate__fadeInBottomO">
+    <p>16. fade in bottom</p>
+    <div class="effect-in uxanimate__fadeInBottom"></div>
+  </div>
+</div>
+<div class="effects-row">
+  <div class="effect">
+    <p>17. slide in top slow</p>
+    <div class="effect-in uxanimate__slideInTopFadeSlow"></div>
+  </div>
+  <div class="effect">
+    <p>18. slide in top mid</p>
+    <div class="effect-in uxanimate__slideInTopFadeMid"></div>
+  </div>
+  <div class="effect">
+    <p>19. slide in top fast</p>
+    <div class="effect-in uxanimate__slideInTopFadeFast"></div>
+  </div>
+  <div class="effect">
+    <p>20. blob (div only)</p>
+    <div class="effect-in uxanimate__blob"></div>
+  </div>
+</div>
+
 </body>
 </html>

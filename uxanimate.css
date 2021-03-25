@@ -25,7 +25,7 @@
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-.uxanimate__fadeIn:hover {
+.uxanimate__fadeIn.appear {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   animation-duration: var(--duration-short);
@@ -42,7 +42,7 @@
   0% {opacity: 1;}
   100% {opacity: 0;}
 }
-.uxanimate__fadeOut:hover {
+.uxanimate__fadeOut.appear {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
   animation-duration: var(--duration-short);
@@ -50,7 +50,7 @@
   opacity: 0;
 }
 
-/*3-slide in left */
+/*3-slide in skew left */
 @keyframes slideInLeft {
   0% {transform: translateX(-10em) skewX(-5deg); opacity: 0;}
   80% {transform: translateX(2em) skewX(5deg);
@@ -59,14 +59,19 @@
         opacity: 1;}
 }
 
-.uxanimate__slideInLeft:hover {
+.uxanimate__slideInLeft {
+  opacity: 0;
+}
+
+.uxanimate__slideInLeft.appear {
   animation-name: slideInLeft;
   animation-duration: var(--duration-mid);
   animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
   opacity: 1;
+  animation-fill-mode: forwards;
 }
 
-/*4-slide in right */
+/*4-slide in skew right */
 @keyframes slideInRight {
   0% {transform: translateX(10em) skewX(5deg); opacity: 0;}
   80% {transform: translateX(-2em) skewX(-5deg);
@@ -75,14 +80,19 @@
         opacity: 1;}
 }
 
-.uxanimate__slideInRight:hover {
+.uxanimate__slideInRight {
+  opacity: 0;
+}
+
+.uxanimate__slideInRight.appear {
   animation-name: slideInRight;
   animation-duration: var(--duration-mid);
   animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
   opacity: 1;
+  animation-fill-mode: forwards;
 }
 
-/*5-slide out left */
+/*5-slide out skew left */
 @keyframes slideOutLeft {
   0% {transform: translateX(0em) skewX(0deg); opacity: 1;}
   20% {transform: translateX(2em) skewX(-5deg); opacity: 1;}
@@ -90,11 +100,16 @@
         opacity: 0;}
 }
 
-.uxanimate__slideOutLeft:hover {
+.uxanimate__slideOutLeft {
+  opacity: 1;
+}
+
+.uxanimate__slideOutLeft.appear {
   animation-name: slideOutLeft;
   animation-duration: var(--duration-mid);
   animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
   opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 /*6-slide out right */
@@ -104,11 +119,16 @@
   100% {transform: translateX(10em) skewX(-5deg); opacity: 0;}
 }
 
-.uxanimate__slideOutRight:hover {
+.uxanimate__slideOutRight {
+  opacity: 1;
+}
+
+.uxanimate__slideOutRight.appear {
   animation-name: slideOutRight;
   animation-duration: var(--duration-mid);
   animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
   opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 /*7-zooming in*/
@@ -119,11 +139,16 @@
   100% {transform: scale(1); opacity: 1;}
 }
 
-.uxanimate__zoomIn:hover {
+.uxanimate__zoomIn {
+  opacity: 0;
+}
+
+.uxanimate__zoomIn.appear {
   animation-name: zoomIn;
   animation-duration: var(--duration-short);
   animation-timing-function: ease-in-out;
   opacity: 1;
+  animation-fill-mode: forwards;
 }
 
 /*8-zooming out*/
@@ -134,11 +159,16 @@
   100% {transform: scale(0); opacity: 0;}
 }
 
-.uxanimate__zoomOut:hover {
+.uxanimate__zoomOut {
+  opacity: 1;
+}
+
+.uxanimate__zoomOut.appear {
   animation-name: zoomOut;
   animation-duration: var(--duration-short);
   animation-timing-function: ease-in-out;
   opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 /*9-spacing */
@@ -160,7 +190,7 @@
   100% {clip-path: inset(0px 0px 0px 0px);}
 }
 
-.uxanimate__swipeIn:hover {
+.uxanimate__swipeIn:hover .uxanimate__swipeInInside{
   animation-name: swipeIn;
   animation-duration: var(--duration-long);
   animation-timing-function: ease-in-out;
@@ -173,14 +203,205 @@
   100% {clip-path: inset(0px 0px 0px 200px); opacity: 0;}
 }
 
-.uxanimate__swipeInOut:hover {
+.uxanimate__swipeInOut:hover .uxanimate__swipeInOutInside{
   animation-name: swipeInOut;
   animation-duration: var(--duration-long);
   animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
 }
 
-/*examples*/
+/*12 - text highlight */
+.uxanimate__highlightText {
+  background-image: linear-gradient(120deg, #139686 0%, #139686 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 0.4em;
+  background-position: 0 110%;
+  transition: background-size 300ms ease-in-out;
+}
 
+.uxanimate__highlightText:hover{
+  background-size: 80% 0.4em;
+}
+
+/*13 - blob animation */
+.uxanimate__blob {
+  background: linear-gradient(120deg, #139686 0%, #139686 100%);
+  animation: morph 6s ease-in-out infinite;
+  -moz-animation: morph 6s ease-in-out infinite;
+  -webkit-animation: morph 6s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 400px;
+  transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  width: 400px;
+  z-index: 5;
+}
+
+@keyframes morph {
+  0% {
+			border-radius:  50% 40% 30% 70% / 60% 30% 70% 40%;
+	} 
+	50% {
+			border-radius:  20% 60% 70% 40% / 60% 60% 30% 60%;
+	}
+	100% {
+		border-radius:  50% 40% 30% 70% / 60% 30% 70% 40%;
+	} 
+}
+
+/*14- fade in on hover */
+.uxanimate__fadeInOnHover:hover .uxanimate__fadeInOnHoverIn{
+  animation-name: fadeInWithOpacity;
+  animation-duration: var(--duration-long);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInWithOpacity {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(2em);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+  60% {
+    transform: translateY(-2em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*15 - slide in left with fade */ 
+.uxanimate__slideInLeftFade {
+  grid-column: 2 / 3;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+
+.uxanimate__slideInLeftFade.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/*16 - slide in right with fade */
+.uxanimate__slideInRightFade {
+  grid-column: 3 / 4;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+
+.uxanimate__slideInRightFade.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/*17 - fade in from bottom */
+.uxanimate__fadeInBottom {
+  opacity: 0;
+}
+
+.uxanimate__fadeInBottom.appear {
+  animation-name: fadeInBottom;
+  animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+/*18 - slide in top with fade slow */ 
+.uxanimate__slideInTopFadeSlow {
+  grid-column: 2 / 3;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: opacity 250ms ease-in, -webkit-transform 500ms ease-in;
+  transition: opacity 250ms ease-in, transform 500ms ease-in;
+  transition: opacity 250ms ease-in, transform 500ms ease-in,
+    -webkit-transform 500ms ease-in;
+  opacity: 1;
+}
+
+.uxanimate__slideInTopFadeSlow:hover {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/*19 - slide in top with fade middle */ 
+.uxanimate__slideInTopFadeMid {
+  grid-column: 2 / 3;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: opacity 200ms ease-in, -webkit-transform 300ms ease-in;
+  transition: opacity 200ms ease-in, transform 300ms ease-in;
+  transition: opacity 200ms ease-in, transform 300ms ease-in,
+    -webkit-transform 300ms ease-in;
+  opacity: 1;
+}
+
+.uxanimate__slideInTopFadeMid:hover {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/*20 - slide in top with fade fast */ 
+.uxanimate__slideInTopFadeFast {
+  grid-column: 2 / 3;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: opacity 100ms ease-in, -webkit-transform 100ms ease-in;
+  transition: opacity 100ms ease-in, transform 100ms ease-in;
+  transition: opacity 100ms ease-in, transform 100ms ease-in,
+    -webkit-transform 100ms ease-in;
+  opacity: 1;
+}
+
+.uxanimate__slideInTopFadeFast:hover {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+/*examples*/
 h2 {
   text-align: center;
   font-family: sans-serif;
@@ -199,3 +420,4 @@ h2 {
   animation-iteration-count: infinite;
   opacity: 0;
 }
+

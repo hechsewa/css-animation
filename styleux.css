@@ -1,0 +1,129 @@
+h1 {
+  color: white;
+  font-family: sans-serif;
+  size: 35px;
+  text-align: center;
+  margin: 35px;
+}
+.effects-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 100px;
+  margin-bottom: 50px;
+}
+
+.effect {
+  border: 1px gray solid;
+  padding: 0px 25px 25px 25px;
+  width: 120px;
+  height: 150px;
+}
+
+p {
+  color: gray;
+  font-family: sans-serif;
+}
+
+.effect-in {
+  background-color: aqua;
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+/* uxanimate hovers */
+.uxanimate__fadeIn:hover {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: var(--duration-short);
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+}
+
+.uxanimate__fadeOut:hover{
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  animation-duration: var(--duration-short);
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+.uxanimate__slideInLeftO:hover .uxanimate__slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__slideInRightO:hover .uxanimate__slideInRight{
+  animation-name: slideInRight;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__slideOutLeftO:hover .uxanimate__slideOutLeft{
+  animation-name: slideOutLeft;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__slideOutRightO:hover .uxanimate__slideOutRight {
+  animation-name: slideOutRight;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__zoomInO:hover .uxanimate__zoomIn {
+  animation-name: zoomIn;
+  animation-duration: var(--duration-short);
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__zoomOutO:hover .uxanimate__zoomOut {
+  animation-name: zoomOut;
+  animation-duration: var(--duration-short);
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__spacing, .uxanimate__highlightText {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.effect-in.uxanimate__spacing {
+  background-color: transparent;
+}
+
+.uxanimate__slideInFadeO:hover .uxanimate__slideInLeftFade, .uxanimate__slideInFadeO:hover .uxanimate__slideInRightFade {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.uxanimate__fadeInBottomO:hover .uxanimate__fadeInBottom {
+  animation-name: fadeInBottom;
+  animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.uxanimate__slideInTopFadeSlow, .uxanimate__slideInTopFadeMid, .uxanimate__slideInTopFadeFast {
+  opacity: 0;
+}
+
+.uxanimate__blob {
+  background: linear-gradient(120deg, aqua 0%, aqua 100%);
+}
