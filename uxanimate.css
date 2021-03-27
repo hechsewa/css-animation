@@ -184,29 +184,30 @@
   animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
 }
 
-/*10- swipeIn */
-@keyframes swipeIn {
-  0% {clip-path: inset(0px 200px 0px 0px);}
-  100% {clip-path: inset(0px 0px 0px 0px);}
+/*10- swipe with zoom top */
+@keyframes zoomTop {
+  0% {transform: scale(0) translateY(-100%); opacity: 0;}
+  50% {opacity: 1;}
+  100% {transform: scale(1) translateY(0); opacity: 1;}
 }
 
-.uxanimate__swipeIn:hover .uxanimate__swipeInInside{
-  animation-name: swipeIn;
-  animation-duration: var(--duration-long);
+.uxanimate__zoomInTop:hover .uxanimate__zoomInTopIn{
+  animation-name: zoomTop;
+  animation-duration: var(--duration-mid);
   animation-timing-function: ease-in-out;
 }
 
-/*11- swipeInOut */
-@keyframes swipeInOut{
-  0% {clip-path: inset(0px 200px 0px 0px); opacity: 1;}
-  50% {clip-path: inset(0px 0px 0px 0px); opacity: 1;}
-  100% {clip-path: inset(0px 0px 0px 200px); opacity: 0;}
+/*11- swipe with zoom bottom */
+@keyframes zoomBtm {
+  0% {transform: scale(0) translateY(100%); opacity: 0;}
+  50% {opacity: 1;}
+  100% {transform: scale(1) translateY(0); opacity: 1;}
 }
 
-.uxanimate__swipeInOut:hover .uxanimate__swipeInOutInside{
-  animation-name: swipeInOut;
-  animation-duration: var(--duration-long);
-  animation-timing-function: cubic-bezier(1, 0.2, 0, 0.8);
+.uxanimate__zoomInBtm:hover .uxanimate__zoomInBtmIn{
+  animation-name: zoomBtm;
+  animation-duration: var(--duration-mid);
+  animation-timing-function: ease-in-out;
 }
 
 /*12 - text highlight */
